@@ -24,12 +24,10 @@ body {
 .CV .CV_left{
     width: 280px ;
     background : lightslategray ;
+    display: flex;
 
 }
-.CV .CV_left .CV_profile{
-    width:  100% ;
-    height:  280px;
-}
+
 .CV .CV_left .CV_content{
     padding: 0 25px;
 
@@ -54,7 +52,7 @@ body {
     border-bottom: 0px;
 }
 .CV .CV_left ul li{
-    display: flex;
+ display: flexbox;
     align-items: center;
     margin-bottom: 10px  ;
 }
@@ -65,7 +63,7 @@ body {
     width:  40px ;
     height: 35px ;
     background:  #fff;
-    color: blue;
+    color: black;
     border-radius: 50%;
     margin-right : 15px ; 
     font-size: 16px ;
@@ -95,7 +93,7 @@ body {
     width : 60% ; 
     margin: 0 5px;
     height:  5px ;
-    background:white ;
+    background:blueviolet ;
     position: relative;
 }
 .CV .CV_left .CV_skills ul li .skill_percentage{
@@ -107,13 +105,14 @@ body {
     top : 0 ; 
     left: 0 ;
     height:  100% ;
-    background: #fff;
+    background:greenyellow;
 
 }
 .CV .CV_right{
     width:  520px ; 
     background:  #fff;
     padding: 25px;
+    display: flex;
 
 }
 .CV .CV_right .bold{
@@ -267,3 +266,36 @@ body {
 .profile-content-wrapper h1 {
     color: blueviolet;
 }
+.GitHub {
+    background-color: blueviolet ; 
+    border: none;
+    color:black ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .Facebook {
+    background-color: blue; 
+    border: none;
+    color:black ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+  }
+  .LinkedIn {
+    background-color: blueviolet; 
+    border: none;
+    color:black ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+  }
+  
