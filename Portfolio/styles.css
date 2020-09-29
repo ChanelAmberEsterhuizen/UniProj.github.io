@@ -1,0 +1,269 @@
+/*Main Page*/
+body { 
+    margin: 0px ;
+    padding:  0 ;
+   background: lightskyblue ; 
+   font-size:  14px ;
+   line-height: 22px;
+
+}
+.bold{
+    font-weight: 700;
+    font-size: 20px;
+}
+.semi_bold{
+    font-weight: 500;
+    font-size:16px ;
+}
+.CV{ 
+    width: 800px ;
+    height: auto ;
+    display:  flex ;
+    margin: 50px auto ;
+}
+.CV .CV_left{
+    width: 280px ;
+    background : lightslategray ;
+
+}
+.CV .CV_left .CV_profile{
+    width:  100% ;
+    height:  280px;
+}
+.CV .CV_left .CV_content{
+    padding: 0 25px;
+
+}
+.CV .title{ 
+ margin-bottom: 20px ;   
+}
+
+.CV .CV_left .bold{
+    color: #fff;
+}
+.CV .CV_left .regular{
+    color: black;
+
+}
+
+.CV .CV_item{
+    padding: 25px 0 ;
+    border-bottom: 2px solid black;
+}
+.CV .CV_left .CV_item:last-child {
+    border-bottom: 0px;
+}
+.CV .CV_left ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px  ;
+}
+.CV .CV_left ul li :last-child{
+    margin-bottom:  0 ;
+}
+.CV .CV_left ul li .icon{
+    width:  40px ;
+    height: 35px ;
+    background:  #fff;
+    color: blue;
+    border-radius: 50%;
+    margin-right : 15px ; 
+    font-size: 16px ;
+    position: relative;
+}
+
+.CV .icon i{ 
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
+
+}
+.CV .CV_left ul li .data{ 
+    color: white ;
+
+}
+.CV .CV_left .CV_skills ul li{ 
+    color: white ;
+}
+
+.CV .CV_left .CV_skills ul li .skill_name{
+    width:  25% ;
+}
+
+.CV .CV_left .CV_skills ul li .skill_progress{
+    width : 60% ; 
+    margin: 0 5px;
+    height:  5px ;
+    background:white ;
+    position: relative;
+}
+.CV .CV_left .CV_skills ul li .skill_percentage{
+    width:  15% ;
+}
+
+.CV .CV_left .CV_skills ul li .skill_progress span{
+    position: absolute;
+    top : 0 ; 
+    left: 0 ;
+    height:  100% ;
+    background: #fff;
+
+}
+.CV .CV_right{
+    width:  520px ; 
+    background:  #fff;
+    padding: 25px;
+
+}
+.CV .CV_right .bold{
+    color: blueviolet;
+}
+.CV .CV_right .CV_work ul,
+.CV .CV_right .CV_education ul{
+    padding-left:  40px;
+    overflow: hidden;
+
+} 
+.CV .CV_right ul li{ 
+    position: relative;
+}
+.CV .CV_right ul li .date{
+    font-size:  16px ;
+    font-weight:  500 ;
+    margin-bottom:  15px ;
+}
+.CV .CV_right ul li .info{
+    margin-bottom:  20px ;
+
+}
+.CV .CV_right ul li:last-child .info{
+    margin-bottom: 0 ;
+}
+.CV .CV_right .CV_work ul li:before, 
+.CV .CV_right .CV_education ul:before{
+    content: "";
+    position: absolute;
+    top : 5px ; 
+    left : -25px ;
+    width:  6px ; 
+    height: 6px ;
+    border-radius: 50%;
+    border : 2px solid #0bb5f4 ; 
+}
+.CV .CV_right .CV_work ul li:after, 
+.CV .CV_right .CV_education ul:after{
+    content: "";
+    position: absolute;
+    top : 14px; 
+    left : -21px ; 
+    width : 2px ; 
+    height : 115px ; 
+    background: #0bb5f4;
+}
+
+
+
+.container{ 
+    display:  grid ;
+    grid-template-columns: 1fr ;
+}
+/* Navigator*/
+.nav-wrapper{ 
+    display: flex;
+    justify-content:  space-between;
+    justify-content: space-around;
+    padding:  40px ;
+}
+.left-side {
+    display: flex ;
+
+}
+
+.nav-wrapper > .left-side > div  {
+   margin-right: 20px;
+   font-size: 0.9m;
+    text-transform:  uppercase;
+}
+.nav-link-wrapper{
+    height : 22px ; 
+    border-bottom:  1px solid transparent;
+    transition: border-bottom 0.5s;
+
+}
+.nav-link-wrapper a { 
+    color : darkcyan ; 
+    text-decoration:none ;
+    transition: color 0.5s;
+   
+   
+}
+.nav-link-wrapper:hover { 
+    border-bottom:  1px solid blueviolet;
+}
+.nav-link-wrapper a:hover {
+    color: blueviolet;
+}
+
+.active-nav-link{ 
+    border-bottom:  1px solid black ;
+}
+.active-nav-link a { 
+    color : black !important  ; 
+}
+/*CV*/
+.portfolio-items-wrapper{
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+}
+.portfolio-item-wrapper{
+    position: relative ;
+
+}
+
+.portfolio-img-background{ 
+    height: 300px ;
+    width:  100% ;
+    background-size:  cover ;
+    background-position:  center ;
+    background-repeat: no-repeat ;
+}
+.img-text-wrapper { 
+    position: absolute;
+    top : 0 ; 
+    display: flex ;
+    flex-direction:  column ;
+    justify-content: center;
+    align-items: center ;
+    height:  100% ;
+    text-align: center ;
+    padding-left: 100px ;
+    padding-right: 100px ;
+}
+.img-text-wrapper .subtitle{ 
+   transition: 1s;
+   font-weight: 600;
+   color:  transparent ;
+}
+.img-text-wrapper:hover .subtitle{ 
+    font-weight:  600 ;
+    font-size: 30px;
+    color:white ; 
+}
+.img-darken{ 
+    transition:  1s ;
+    filter:  brightness(10%);
+
+}
+/*About Page*/ 
+.info-wrapper {
+    display:  grid ;
+    grid-template-columns:  1fr 1fr ;
+}
+.profile-content-wrapper{
+    padding : 30px ; 
+
+}
+.profile-content-wrapper h1 {
+    color: blueviolet;
+}
