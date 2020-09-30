@@ -11,54 +11,38 @@ body {
    justify-content: center;
 
 }
-.loading{
-    width:  450px ;
-    height: 450px ;
-    box-sizing: border-box;
-    border-radius:  50% ;
-    border-top: 10px solid blueviolet ;
-    position: relative;
-    animation: a1 2s linear infinite;
 
-}
-.loading ::before, .loading ::after{
-    content: '';
-    width: 450px ;
-    height:450px ;
+
+
+
+#container {
+z-index: -1000;
     position: absolute;
-    left: 0;
-    top : -10px ;
-    box-sizing: border-box ;
-    border-radius: 50% ;
+    font-size: 80px;
+    
+    
 }
- .loading::before{
-     border-top:  10px solid blueviolet;
-     transform:  rotate(120deg);
- }
- .loading::after{
-     border-top: 10px solid black;
-     transform: rotate(120deg);
- }
- .loading span{
-     position: absolute;
-     width: 450px;
-     height: 450px ;
-     font-size: 100px;
-     color: black;
-     text-align: center ;
-     line-height: 200px ;
-     animation: a2 2s linear infinite;
-
- }
- @keyframes a1{
-     to{transform: rotate(360deg);}
-
- }
-@keyframes a2{ 
-    to{
-        transform: rotate(-360deg);
-    }
+#hideMe {
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
 }
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+
+
+
+
+
 .Scroll{
     font-size: 30px ;
     color: blueviolet;
@@ -282,6 +266,7 @@ body {
     background-size:  cover ;
     background-position:  center ;
     background-repeat: no-repeat ;
+
 }
 .img-text-wrapper { 
     position: absolute;
