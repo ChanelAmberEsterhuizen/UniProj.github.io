@@ -34,9 +34,7 @@ body {
  .loading::before{
      border-top:  10px solid blueviolet;
      transform:  rotate(120deg);
-
  }
-
  .loading::after{
      border-top: 10px solid black;
      transform: rotate(120deg);
