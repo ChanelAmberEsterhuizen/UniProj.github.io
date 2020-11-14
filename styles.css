@@ -2,7 +2,7 @@
 body { 
     margin: 0px ;
     padding:  0 ;
-   background: lightskyblue ; 
+   background: lightgray ; 
    height:  100vh ;
    font-size:  14px ;
    line-height: 22px;
@@ -45,7 +45,7 @@ z-index: -1000;
 
 .Scroll{
     font-size: 30px ;
-    color: blueviolet;
+    color:green ;
 }
 .bold{
     font-weight: 700;
@@ -63,7 +63,7 @@ z-index: -1000;
 }
 .CV .CV_left{
     width: 280px ;
-    background : lightslategray ;
+    background: lightblue ;
     display: flex;
 
 }
@@ -121,33 +121,9 @@ z-index: -1000;
     color: white ;
 
 }
-.CV .CV_left .CV_skills ul li{ 
-    color: white ;
-}
 
-.CV .CV_left .CV_skills ul li .skill_name{
-    width:  25% ;
-}
 
-.CV .CV_left .CV_skills ul li .skill_progress{
-    width : 60% ; 
-    margin: 0 5px;
-    height:  5px ;
-    background:blueviolet ;
-    position: relative;
-}
-.CV .CV_left .CV_skills ul li .skill_percentage{
-    width:  15% ;
-}
 
-.CV .CV_left .CV_skills ul li .skill_progress span{
-    position: absolute;
-    top : 0 ; 
-    left: 0 ;
-    height:  100% ;
-    background:greenyellow;
-
-}
 .CV .CV_right{
     width:  520px ; 
     background:  #fff;
@@ -158,12 +134,7 @@ z-index: -1000;
 .CV .CV_right .bold{
     color: blueviolet;
 }
-.CV .CV_right .CV_work ul,
-.CV .CV_right .CV_education ul{
-    padding-left:  40px;
-    overflow: hidden;
 
-} 
 .CV .CV_right ul li{ 
     position: relative;
 }
@@ -179,27 +150,7 @@ z-index: -1000;
 .CV .CV_right ul li:last-child .info{
     margin-bottom: 0 ;
 }
-.CV .CV_right .CV_work ul li:before, 
-.CV .CV_right .CV_education ul:before{
-    content: "";
-    position: absolute;
-    top : 5px ; 
-    left : -25px ;
-    width:  6px ; 
-    height: 6px ;
-    border-radius: 50%;
-    border : 2px solid #0bb5f4 ; 
-}
-.CV .CV_right .CV_work ul li:after, 
-.CV .CV_right .CV_education ul:after{
-    content: "";
-    position: absolute;
-    top : 14px; 
-    left : -21px ; 
-    width : 2px ; 
-    height : 115px ; 
-    background: #0bb5f4;
-}
+
 
 
 
@@ -308,7 +259,7 @@ z-index: -1000;
     color: blueviolet;
 }
 .GitHub {
-    background-color: blueviolet ; 
+    background-color: rgb(43, 174, 226) ; 
     border: none;
     color:black ;
     padding: 10px 20px;
@@ -329,7 +280,7 @@ z-index: -1000;
     font-size: 12px;
   }
   .LinkedIn {
-    background-color: blueviolet; 
+    background-color: rgb(116, 226, 43); 
     border: none;
     color:black ;
     padding: 10px 20px;
