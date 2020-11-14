@@ -7,8 +7,6 @@ body {
    font-size:  14px ;
    line-height: 22px;
 
-   align-items: center;
-   justify-content: center;
 
 }
 
@@ -21,20 +19,6 @@ z-index: -1000;
     font-size: 80px;
     
     
-}
-#hideMe {
-    -webkit-animation: cssAnimation 3s forwards; 
-    animation: cssAnimation 3s forwards;
-}
-@keyframes cssAnimation {
-    0%   {opacity: 1;}
-    90%  {opacity: 1;}
-    100% {opacity: 0;}
-}
-@-webkit-keyframes cssAnimation {
-    0%   {opacity: 1;}
-    90%  {opacity: 1;}
-    100% {opacity: 0;}
 }
 
 
@@ -58,13 +42,13 @@ z-index: -1000;
 .CV{ 
     width: 800px ;
     height: auto ;
-    display:  flex ;
+
     margin: 50px auto ;
 }
 .CV .CV_left{
     width: 280px ;
     background: lightblue ;
-    display: flex;
+
 
 }
 
@@ -99,24 +83,9 @@ z-index: -1000;
 .CV .CV_left ul li :last-child{
     margin-bottom:  0 ;
 }
-.CV .CV_left ul li .icon{
-    width:  40px ;
-    height: 35px ;
-    background:  #fff;
-    color: black;
-    border-radius: 50%;
-    margin-right : 15px ; 
-    font-size: 16px ;
-    position: relative;
-}
 
-.CV .icon i{ 
-    position: absolute;
-    top: 50%;
-    left:  50%;
-    transform: translate(-50%, -50%);
 
-}
+
 .CV .CV_left ul li .data{ 
     color: white ;
 
