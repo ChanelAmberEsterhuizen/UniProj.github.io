@@ -227,7 +227,7 @@ z-index: -1000;
 .profile-content-wrapper h1 {
     color: blueviolet;
 }
-.GitHub {
+.Read {
     background-color: rgb(43, 174, 226) ; 
     border: none;
     color:black ;
@@ -237,7 +237,7 @@ z-index: -1000;
     display: inline-block;
     font-size: 12px;
   }
-  .Facebook {
+  .Upload {
     background-color: blue; 
     border: none;
     color:black ;
@@ -248,7 +248,7 @@ z-index: -1000;
     position: relative;
     font-size: 12px;
   }
-  .LinkedIn {
+  .Login {
     background-color: rgb(116, 226, 43); 
     border: none;
     color:black ;
