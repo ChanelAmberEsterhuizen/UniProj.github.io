@@ -15,6 +15,26 @@ z-index: -1000;
     
     
 }
+ .LOGIN {
+    background-color: seagreen; 
+    border:solid ;
+    color:black ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+ .SIGNUP{
+    background-color: seagreen; 
+    border:solid ;
+    color:black ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
 .Scroll{
     font-size: 30px ;
     color:green ;
