@@ -37,6 +37,7 @@
                       <label for="EmailS">Email:</label>
                 <input type="text" id="EmailS" name="EmailS"><br><br>
                  <button class="LOGIN">LOGIN</button>
+                 <button onclick="createUser()">Create User</button>
        
            </div>
            <ul>
@@ -84,6 +85,28 @@
     </body> 
     
     <script>
+async function  createUser(username, password, email) {
 
+return fetch("http://localhost:3000/user", 
+    { 
+
+    // Adding method type
+
+    method: "POST", 
+
+    // Adding body or contents to send 
+
+    headers :{
+        "content-type": "application/json"
+    },
+
+    body: JSON.stringify({
+        "username" : username.value,
+        "email" : email.value,
+        "password" : password.value
+    })
+});
+
+}
     </script>
 </html>
