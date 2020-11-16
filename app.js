@@ -13,7 +13,8 @@ mongoose.connect('mongodb+srv://Chanel:Berma108!@cluster0.xak0e.mongodb.net/<dbn
 });
 mongoose.Promise = global.Promise;
 
-app.use(express.static('/public')); 
+
+app.use(express.static('public')); 
 app.use(morgan('dev'));
 app.use('/uploads',express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
