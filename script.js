@@ -1,3 +1,4 @@
+
 //const { default: Axios } = require('axios');
 
 //const uri = 'http://jsonplaceholder.typicode.com/users'; 
@@ -158,3 +159,41 @@ const Url = "https://localhost:3000";
 Axios.get(Url)
 .then(data => console.log(data))
 .catch(err => console.log(err)) 
+
+/*
+import React from "react"
+import ReactDOM from "react-dom"
+
+ReactDOM.render(<div><h1>Hello world!!!</h1><p>This is a data classification App</p></div>,document.getElementById("root"))
+var myNewP = document.createElement('p')
+myNewP.innerHTML = "This is a data Classification app for use in South Africa"
+
+function Person(props){
+    return( <div className = "person">
+        <h1>{props.username}</h1>
+        <p>{props.password}</p>
+<p>{props.email}</p>
+        <h1>Chanel</h1>
+        <p>password123</p>
+        <p>Chanel@gmail.com</p>
+    </div>
+
+    );
+}
+
+ReactDOM.render(<Person username = "Chanel" password = "password123" email = "Chanel@gmail.com" />, document.querySelector('#p1') ) ; 
+ReactDOM.render(<Person username = "Ella" password = "Ella123" email = "Ella@gmail.com" />, document.querySelector('#p2') ) ; 
+
+var root =(
+    <div>
+     <Person username = "Chanel" password = "password123" email = "Chanel@gmail.com" />
+    <Person username = "Ella" password = "Ella123" email = "Ella@gmail.com" />
+
+    </div>
+
+);
+ReactDOM.render(root , 
+    document.querySelector('#root'))*/
+
+
+

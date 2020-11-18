@@ -337,3 +337,6 @@ z-index: -1000;
     color: #666;
     font-size: 1.4rem;
 }
+:root{
+    font: bold;
+}
