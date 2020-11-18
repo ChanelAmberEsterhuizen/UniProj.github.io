@@ -1,4 +1,4 @@
-
+//const { default: Axios } = require('axios');
 
 //const uri = 'http://jsonplaceholder.typicode.com/users'; 
 /*const uri = 'http://localhost:3000/people';
@@ -85,7 +85,7 @@ function Validate() {
     var correct = true;
 
     if (idNumber.length != 13 || !isNumber(idNumber)) {
-        error.append('<p>ID number does not appear to be authentic - input not a valid number</p>');
+        error.append('<p>ID number does not appear to be authentic</p>');
         correct = false;
     }
 
@@ -122,7 +122,7 @@ function Validate() {
         multiplier = (multiplier % 2 == 0) ? 1 : 2;
     }
     if ((checkSum % 10) != 0) {
-        error.append('<p>ID number does not appear to be authentic - check digit is not valid</p>');
+        error.append('<p>ID number does not appear to be authentic </p>');
         correct = false;
     };
 
