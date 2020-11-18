@@ -4,6 +4,7 @@
         <meta charset=" utf-8"/>
         <title>SA Data Classification app</title>
    <link rel="stylesheet" href="styles.css">
+  
     </head>
    
     <body>
@@ -41,28 +42,53 @@
       
 
          <p>Upload file</p>
-       
          <form action="/action_page.php">
             <input type="file" id="myFile" name="filename">
             <input type="submit">
           </form>
 
-         <p>Read data</p>
-         <button class="Read">Click here to read data</button>
+
+
+
+
+
+
+
+          
          
-
-         <p>Read metadata</p>
-         <button class="ReadMetadata">Click here to read metadata</button>
-
+         <p>Read data</p>
+         <input type="button" onclick="location.href='/people'" value="Read data in database" />
+<p>                                                               </p>
 
         
+        <div id ="output" class = "">
+  <ul id = "users">
+  </ul>
 
-         <p>Classidy ID length(13)</p>
-         <button class="IDlength13">Click here to validate the ID length</button>
+
+
+        </div>
+         <p>Read metadata</p>
+         <input type="button" onclick="location.href='/people'" value="Read metadata " />
+         <p>                                              </p>
+         
 
          <p>Classify ID validility using Luhn algorithm</p>
-         <button class="IDLuhn">Click here to validate the ID using Luhn</button>
+         <div id="error"></div>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+         <form id="idCheck">
+             <p>Enter the ID Number: <input id="idnumber" /> </p>
+             <p> <input type="submit" value="Check" /> </p>
+         </form>
+         <div id="result"> </div>
+         <script>
+             
+         </script>
 
+
+ 
+        <p>                      </p>
+        <fieldset>
          <p>Personal Info</p>
          <p>Display Personal info here...</p>
          <button class="Approve">Click here to approve the personal info</button>
@@ -70,10 +96,8 @@
          <button class="Disapprove">Click here to Disaprove the personal info </button>
                  <p>                 </p>
          <button class="InsertClassified">Click here to ammend more data</button>
-         <p>Checkbox</p>
+        </fieldset>
         
-              
-
            </div>
 
        </div>  
@@ -83,12 +107,12 @@
 
 
 
-         
+     <script src = "./script.js" async >
+
+    </script>  
 
     </body> 
     
-    <script>
-
-    </script>
+   
 
          

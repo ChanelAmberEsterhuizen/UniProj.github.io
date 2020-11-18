@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
 const peopleRoutes = require('./api/routes/people');
 const userRoutes = require('./api/routes/user');
+const { default: Axios } = require('axios');
 mongoose.connect('mongodb+srv://Chanel:Berma108!@cluster0.xak0e.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     //useMongoClient: true
 });
@@ -47,5 +48,8 @@ app.use((error, req, res, next) => {
         }
     });
 });
+
+
+
 
 module.exports = app;
