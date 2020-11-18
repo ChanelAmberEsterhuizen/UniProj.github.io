@@ -1,4 +1,4 @@
-const { default: Axios } = require('axios');
+
 
 //const uri = 'http://jsonplaceholder.typicode.com/users'; 
 /*const uri = 'http://localhost:3000/people';
