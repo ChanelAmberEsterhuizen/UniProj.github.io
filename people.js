@@ -5,7 +5,7 @@ const people = require('../models/people');
 const multer = require('multer');
 const checkAuth = require('../middleware/check-auth');
 
-
+//File upload
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
       cb(null, './uploads/');
@@ -29,6 +29,7 @@ const storage = multer.diskStorage({
   const upload = multer({dest: 'uploads/', limits: {fileFilter: fileFilter }} );
 const People = require('../models/people');
 
+//This is a get reqeust
 router.get("/", (req, res, next) => {
     People.find().select('_id idnum name surname peopleImage').exec().then(docs => {
         const response = {
@@ -63,7 +64,8 @@ router.get("/", (req, res, next) => {
     });
 });
 
-router.post("/", checkAuth ,  upload.single('peopleImage'),  (req, res, next) => {
+//This is a post request
+router.post("/",  upload.single('peopleImage'),  (req, res, next) => {
     console.log(req.file);
     const people = new People({
         _id: new mongoose.Types.ObjectId(),
@@ -162,6 +164,78 @@ router.delete("/:_id", checkAuth, (req, res, next) => {
 });
 
 
+//Classify Email and phone
+var Email  = "";
+var Id = "";
+var Phone = "";
+
+router.post('/extraction', (req, res, next) => {
+
+    var line = req.body.list;
+
+    var regexMail = /\S+@\S+\.\S+/;
+    var emailMatch = regexMail.exec(line);
+
+    if (emailMatch == null) {
+
+    } else {
+        var emailValid = validateEmail(emailMatch[0]);
+
+        if (emailValid == true) {
+            Email = emailMatch[0];
+
+        } else {
+            res.status(200).json({
+
+            });
+        }
+    }
+    var IdNum = luhnCheck(line);
+    if (IdNum == true) {
+        Id = line;
+        console.log("ID: " + line);
+    } else {
+        console.log("Not an ID");
+    }
+    var numberP = validatePhone(line);
+    if (numberP == true) {
+       cellnum = line;
+    }
+
+    res.status(200).json({
+        message: 'Validated Fields',
+        Email: Email,
+        IDNumber: Id,
+       Phone: Phone
+    })
+}); 
+
+
+
+
 
 
 module.exports = router;
+//Email 
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+//cellnum
+function validatePhone(number) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    return re.test(number);
+}
+
+
+//ID
+const luhnCheck = num => {
+    let arr = (num + '')
+        .split('')
+        .reverse()
+        .map(x => parseInt(x));
+    let lastDigit = arr.splice(0, 1)[0];
+    let sum = arr.reduce((acc, val, i) => (i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9), 0);
+    sum += lastDigit;
+    return sum % 10 === 0;
+};
